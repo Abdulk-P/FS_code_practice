@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple student registration system.">
+    <meta name="keywords" content="student registration, form, records">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Registration System</h1>
+        <p>A Simple System to Register Student Details, Edit, and Delete records.</p>
+    </header>
+
+    <main>
+        <section id="registration-form">
+            <h2>Register New Student</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="studentId">Student ID:</label>
+                    <input type="text" id="studentId" name="studentId" required>
+                    <span class="error-message" id="idError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="emailId">Email ID:</label>
+                    <input type="email" id="emailId" name="emailId" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contactNo">Contact No:</label>
+                    <input type="tel" id="contactNo" name="contactNo" required>
+                    <span class="error-message" id="contactError"></span>
+                </div>
+                <button type="submit">Add Student</button>
+                <input type="hidden" id="editIndex" value="-1"> </form>
+        </section>
+
+        <section id="student-records">
+            <h2>Registered Students</h2>
+            <div id="records-container">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Student ID</th>
+                            <th>Email ID</th>
+                            <th>Contact No</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
