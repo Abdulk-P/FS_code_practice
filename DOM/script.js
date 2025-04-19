@@ -41,5 +41,40 @@ document.querySelector('.para2').textContent = "abdul from textConten setters";
 
 
 
+//-------------------attribute selector and setters to attribute value
+
+let ab = document.querySelector('h2');
+//getters
+console.log(ab.getAttribute('class'));
+console.log(ab.getAttribute('id'));
 
 
+//setters
+ab.setAttribute("class", "abdul is FullStack developer")
+
+
+
+// ----carousel code images slideer
+
+
+// let current = 0;
+// let slides = document.querySelectorAll('.slide');
+
+// function showSlide(index) {
+//     slides.forEach((slide, i) => {
+//         slide.classList.remove('active');
+//         if (i === index) slide.classList.add('active');
+//     });
+// }
+
+// function nextSlide() {
+//     current = (current + 1) % slides.length;
+//     showSlide(current);
+// }
+
+// function prevSlide() {
+//     current = (current - 1 + slides.length) % slides.length;
+//     showSlide(current);
+// }
+
+// showSlide(current);
