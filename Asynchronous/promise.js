@@ -93,3 +93,52 @@ async function callFns() {
 }
 
 callFns();
+
+
+// Write a JavaScript function simplePromiseDemo that:
+
+// Returns a Promise.
+// Logs "Promise is pending..." immediately when the function is called.
+// Simulates a network request using setTimeout to delay the operation by 2 seconds.
+// After the delay, resolves the Promise with a success message "Promise fulfilled: Data received!" if the operation is successful.
+// After the delay, rejects the Promise with an error message "Promise rejected: Error occurred!" if the operation fails.
+
+
+function simplePromiseDemo(success) {
+    console.log("Promise is pending...");
+
+    // Return a Promise
+    return new Promise(function(resolve, reject){
+        setTimeout(function(){
+            if(success) resolve("Promise fulfilled");
+            else reject("Promise rejected");
+        }, 2000);
+    });
+    // Simulate a network request with setTimeout
+    // Resolve or reject the Promise based on the success flag
+}
+
+// Demonstrate fulfilled state
+
+simplePromiseDemo(true)
+.then(function(msg){
+    console.log("success :", msg)
+})
+.catch(function(err){
+    console.log("Error:", err)
+});
+
+// Demonstrate rejected state
+
+simplePromiseDemo(false)
+.then(function(msg){
+    console.log("success :", msg)
+})
+.catch(function(err){
+    console.log("Error:", err)
+});
+
+
+
+
+

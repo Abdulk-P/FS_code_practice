@@ -26,7 +26,7 @@
 
 //using axios for fetching a data
 
-import axios from "axios";
+// import axios from "axios";
 
 // axios.get("https://api.tvmaze.com/search/shows?q=girls")
 // .then(function(resp){
@@ -81,15 +81,28 @@ import axios from "axios";
 //using the Promises to fetch the data from github using the apis
 
 
-let usrnms3 = async function(name){
-    let apis = await fetch(`https://api.github.com/users/${name}`)
-    let data = await apis.json();
-    // console.log(resp.data);
-        console.log(`the number of followers of ${data.login} is ${data.followers}`);
-        console.log(`the number of following of ${data.login} is ${data.following}`);
+// let usrnms3 = async function(name){
+//     let apis = await fetch(`https://api.github.com/users/${name}`)
+//     let data = await apis.json();
+//     // console.log(resp.data);
+//         console.log(`the number of followers of ${data.login} is ${data.followers}`);
+//         console.log(`the number of following of ${data.login} is ${data.following}`);
     
+// }
+
+// usrnms3("Abdulk-P");
+// usrnms3("alokiit");
+// usrnms3("Samarth0606");
+
+
+let apicall = function(){
+    fetch("https://dummyjson.com/posts")
+        .then(function(resp){
+            return resp.json();
+        })
+        .then(function(data){
+            console.log(data.posts['title']);
+        })
 }
 
-usrnms3("Abdulk-P");
-usrnms3("alokiit");
-usrnms3("Samarth0606");
+apicall();
